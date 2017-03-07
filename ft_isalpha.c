@@ -5,17 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: evanheum <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/27 17:51:00 by evanheum          #+#    #+#             */
-/*   Updated: 2017/03/05 17:07:11 by evanheum         ###   ########.fr       */
+/*   Created: 2017/03/06 13:30:50 by evanheum          #+#    #+#             */
+/*   Updated: 2017/03/06 13:35:18 by evanheum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+#include "libft.h"
+
+int ft_isalpha(int c);
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-	{
+	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
 		return (1);
-	}
-	else
-		return (0);
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: evanheum <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/02 17:53:25 by evanheum          #+#    #+#             */
-/*   Updated: 2017/03/05 18:22:59 by evanheum         ###   ########.fr       */
+/*   Updated: 2017/03/06 11:13:25 by evanheum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,17 @@ void *ft_memmove(void *dst, const void *src, size_t len)
 {
 	unsigned char *d;
 	unsigned char *s;
-	size_t i;
 
 	d = (unsigned char*)dst;
 	s = (unsigned char*)src;
-	i = len - 1;
-	while (i <= len)
+	if (s < d)
 	{
-		d[i] = s[i];
-		i--;
+		while (len--)
+		{
+			d[len] = s[len];
+		}
 	}
+	else
+		ft_memcpy(d, s, len);
 	return (d);
 }

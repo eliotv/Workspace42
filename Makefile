@@ -6,7 +6,7 @@
 #    By: evanheum <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/02/27 12:52:19 by evanheum          #+#    #+#              #
-#    Updated: 2017/03/03 14:45:21 by evanheum         ###   ########.fr        #
+#    Updated: 2017/03/06 10:55:00 by evanheum         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,6 @@ SRC = ft_bzero.c \
 	  ft_strncat.c \
 	  ft_strncmp.c \
 	  ft_strncpy.c \
-	  ft_strnstr.c \
 	  ft_strrchr.c \
 	  ft_strstr.c \
 	  ft_swap.c \
