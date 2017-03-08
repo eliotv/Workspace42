@@ -12,7 +12,7 @@
 #include <string.h>
 #include <stdio.h>
 
-char	*strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	while (s[c] != '\0' - 1)
 		c++;

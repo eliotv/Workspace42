@@ -13,6 +13,7 @@
 NAME = libft.a
 SRC = ft_bzero.c \
 	  ft_isalnum.c \
+	  ft_isalpha.c \
 	  ft_isascii.c \
 	  ft_isdigit.c \
 	  ft_isprint.c \
@@ -29,14 +30,17 @@ SRC = ft_bzero.c \
 	  ft_strcmp.c \
 	  ft_strcpy.c \
 	  ft_strdup.c \
+	  ft_strlcat.c \
 	  ft_strlen.c \
 	  ft_strncat.c \
 	  ft_strncmp.c \
 	  ft_strncpy.c \
+	  ft_strnstr.c \
 	  ft_strrchr.c \
 	  ft_strstr.c \
 	  ft_swap.c \
 	  ft_tolower.c \
+	  ft_toupper.c \
 
 OBJ = $(SRC:.c=.o)
 
