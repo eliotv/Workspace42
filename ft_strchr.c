@@ -6,19 +6,21 @@
 /*   By: evanheum <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/01 18:42:43 by evanheum          #+#    #+#             */
-/*   Updated: 2017/03/05 17:14:14 by evanheum         ###   ########.fr       */
+/*   Updated: 2017/03/08 14:21:15 by evanheum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
 #include <string.h>
 
-char *strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	while (s[c] != '\0')
+	while (*s != '\0')
 	{
-		if (s[c] >= 'A' && s[c] <= 'Z' && s[c] >= 'a' && s[c] <= 'z')
-			putchar(c);
-		c++;
+		if (*s == c)
+			return ((char*)s);
+		s++;
 	}
-	return (0);
+	if (*s == c)
+		return((char*)s);
+	return(0);
 }

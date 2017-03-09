@@ -6,12 +6,13 @@
 #    By: evanheum <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/02/27 12:52:19 by evanheum          #+#    #+#              #
-#    Updated: 2017/03/06 10:55:00 by evanheum         ###   ########.fr        #
+#    Updated: 2017/03/08 21:40:55 by evanheum         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-SRC = ft_bzero.c \
+SRC = ft_atoi.c \
+	  ft_bzero.c \
 	  ft_isalnum.c \
 	  ft_isalpha.c \
 	  ft_isascii.c \
