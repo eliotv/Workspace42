@@ -1,27 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_isacii.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: evanheum <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/01 18:52:30 by evanheum          #+#    #+#             */
-/*   Updated: 2017/03/09 13:48:42 by evanheum         ###   ########.fr       */
+/*   Created: 2017/03/05 17:07:48 by evanheum          #+#    #+#             */
+/*   Updated: 2017/03/05 17:10:01 by evanheum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+int ft_isascii(int c);
 {
-	int len;
-	int i;
-
-	i = 0;
-	len = ft_strlen((char*)s);
-	while ( i <= len && s[len] != (char)c)
-		len--;
-	if (s[len] == (char)c)
-		return ((char*)&s[len]);
-	return (0);
+	if (c > 0 && c < 122)
+		return (0);
+	return (1);
 }
+

@@ -6,7 +6,7 @@
 /*   By: evanheum <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/01 17:10:10 by evanheum          #+#    #+#             */
-/*   Updated: 2017/03/05 17:13:59 by evanheum         ###   ########.fr       */
+/*   Updated: 2017/03/09 14:31:21 by evanheum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void ft_putstr(char *str)
 	int i;
 
 	i = 0;
+	if (!str)
+		return ;
 	while(str[i] != '\0')
 	{
 		ft_putchar(str[i]);
