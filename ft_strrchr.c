@@ -14,12 +14,13 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	while (s[c] != '\0' - 1)
-		c++;
-	{
-		if (s[c] >= 'A' && s[c] <= 'Z' && s[c] >= 'a' && s[c] <= 'z')
-			 putchar(c);
-		c--;
-	}
+	int len;
+	int i;
+
+	i = 0;
+	len = ft_strlen(char*)s;
+	while ( i =< len && s[len] != (char)c)
+		len--;
+	if (s[len] == (char)c)
+		return ((char*)&s[len]);
 	return (0);
-}
