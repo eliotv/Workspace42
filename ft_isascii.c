@@ -6,16 +6,13 @@
 /*   By: evanheum <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/05 17:07:48 by evanheum          #+#    #+#             */
-/*   Updated: 2017/03/05 17:10:01 by evanheum         ###   ########.fr       */
+/*   Updated: 2017/03/08 15:39:27 by evanheum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-	if (c > 0 && c < 122)
-		return (0);
-	return (1);
+	return ((c >= 0 && c <= 127) ? 1 : 0 );
 }
-

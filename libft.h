@@ -6,16 +6,17 @@
 /*   By: evanheum <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/27 17:29:52 by evanheum          #+#    #+#             */
-/*   Updated: 2017/03/02 15:42:09 by evanheum         ###   ########.fr       */
+/*   Updated: 2017/03/08 21:43:15 by evanheum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-#define LIBFT_H
+#ifndef	LIBFT_H
+# define LIBFT_H
 #include <string.h>
 #include <stdlib.h>
 #include <unistd.h>
 
+int ft_atoi(const char *str);
 void ft_bzero(void *s, size_t n);
 int ft_isalnum(int c);
 int ft_isalpha(int c);
@@ -34,9 +35,9 @@ char *ft_strcat(char *s1, const char *s2);
 char *strchr(const char *s, int c);
 int ft_strcmp(const char *s1, const char *s2);
 char *ft_strcpy(char *s1, const char *s2);
-size_t ft_strnlen(char *str);
+size_t ft_strnlen(const char *str);
 size_t ft_strlcat(char *dst, const char *src, size_t size);
-size_t ft_strlen(char *str);
+size_t ft_strlen(const char *str);
 char *ft_strncat(char *dst, const char *src, size_t n);
 int ft_strncmp(const char *s1, const char *s2, size_t n);
 char *ft_strncpy(char *dst, const char *src, size_t len);

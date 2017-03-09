@@ -1,26 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: evanheum <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/01 18:42:43 by evanheum          #+#    #+#             */
-/*   Updated: 2017/03/08 14:21:15 by evanheum         ###   ########.fr       */
+/*   Created: 2017/03/08 14:25:29 by evanheum          #+#    #+#             */
+/*   Updated: 2017/03/08 17:41:56 by evanheum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <string.h>
 
-char	*ft_strchr(const char *s, int c)
+#include "libft.h"
+
+int	ft_atoi(const char *str)
 {
-	while (*s != '\0')
+	int answer;
+	int pos_neg;
+
+	answer = 0;
+	pos_neg = 1;
+	while(*str == '\t' || *str == '\n'|| *str == '\r' || *str == '\v' 
+			|| *str == '\f' || *str == ' ')
+		str++;
+	if (*str == '-')
 	{
-		if (*s == c)
-			return ((char*)s);
-		s++;
+		pos_neg = -1;
+		str++;
 	}
-	if (*s == c)
-		return((char*)s);
-	return(0);
+	else if(*str == '+')
+		str++;
+	while (*str >= '0' && *str <= '9')
+	{	
+		answer = answer * 10 + (*str - '0');
+		str++;
+	}
+	return (answer * pos_neg);
 }

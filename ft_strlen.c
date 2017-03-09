@@ -6,13 +6,13 @@
 /*   By: evanheum <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/01 17:22:59 by evanheum          #+#    #+#             */
-/*   Updated: 2017/03/05 17:14:43 by evanheum         ###   ########.fr       */
+/*   Updated: 2017/03/08 16:48:36 by evanheum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
 	size_t i;
 
