@@ -27,6 +27,8 @@ SRC = ft_atoi.c \
 	  ft_memmove.c \
 	  ft_memset.c \
 	  ft_putchar.c \
+	  ft_putendl.c \
+	  ft_putnbr.c \
 	  ft_putstr.c \
 	  ft_strcat.c \
 	  ft_strchr.c \
@@ -52,6 +54,7 @@ SRC = ft_atoi.c \
 	  ft_strrchr.c \
 	  ft_strstr.c \
 	  ft_strsub.c \
+	  ft_strtrim.c \
 	  ft_swap.c \
 	  ft_tolower.c \
 	  ft_toupper.c \

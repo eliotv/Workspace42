@@ -6,7 +6,7 @@
 /*   By: evanheum <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/27 17:29:52 by evanheum          #+#    #+#             */
-/*   Updated: 2017/03/10 15:44:27 by evanheum         ###   ########.fr       */
+/*   Updated: 2017/03/11 14:49:41 by evanheum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ void ft_memdel(void **ap);
 void *ft_memmove(void *dst, const void *src, size_t len);
 void *ft_memset(void *b, int c, size_t len);
 void ft_putchar(char c);
+void ft_putendl(char const *s);
+void ft_putnbr(int n);
 void ft_putstr(char *str);
 char *ft_strcat(char *s1, const char *s2);
 char *strchr(const char *s, int c);
@@ -57,6 +59,7 @@ char *ft_strnstr(const char *big, const char *little, size_t len);
 char *ft_strrchr(const char *s, int c);
 char *ft_strstr(const char *big, const char *little);
 char *ft_strsub(char const *s, unsigned int start, size_t len);
+char *ft_strtrim(char const *s);
 void ft_swap(int *a, int *b);
 int ft_tolower(int c);
 int ft_toupper(int c);

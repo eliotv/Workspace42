@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memdel.c                                        :+:      :+:    :+:   */
+/*   ft_putendl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: evanheum <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/09 16:38:44 by evanheum          #+#    #+#             */
-/*   Updated: 2017/03/11 11:47:57 by evanheum         ###   ########.fr       */
+/*   Created: 2017/03/11 14:27:19 by evanheum          #+#    #+#             */
+/*   Updated: 2017/03/11 14:47:03 by evanheum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_memdel(void **ap)
+void	ft_putendl(char const *s)
 {
-	if(ap && *ap)
+	while (*s)
 	{
-		free(*ap);
-		*ap = 0;
+		ft_putchar(*s);
+		s++;
 	}
+	ft_putchar('\n');
 }
