@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: evanheum <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: evanheum <evanheum@42.us.org>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/27 17:15:06 by evanheum          #+#    #+#             */
-/*   Updated: 2017/03/10 13:39:09 by evanheum         ###   ########.fr       */
+/*   Created: 2017/03/10 14:46:25 by evanheum          #+#    #+#             */
+/*   Updated: 2017/03/10 15:18:02 by evanheum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+int	ft_strequ(char const *s1, char const *s2)
 {
-	size_t i;
-	size_t len;
-	char *str;
-
-	i = 0;
-	len = ft_strlen((char*)s1);
-	str = (char*)malloc((len + 1) * sizeof(*s1));
-	if (!str)
+	if (!s1 || !s2)
 		return (0);
-	while (i <= len)
+	if (s1 && s2)
 	{
-		str[i] = s1[i];
-		i++;
+		while (*s1 && *s2)
+		{
+			s1++;
+			s2++;
+			if (*s1 != *s2)
+				return (0);
+		}
+		return (1);
 	}
-	return (str);
+	return (0);
 }

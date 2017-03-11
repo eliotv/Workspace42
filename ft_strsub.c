@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: evanheum <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: evanheum <evanheum@42.us.org>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/27 17:15:06 by evanheum          #+#    #+#             */
-/*   Updated: 2017/03/10 13:39:09 by evanheum         ###   ########.fr       */
+/*   Created: 2017/03/10 15:23:50 by evanheum          #+#    #+#             */
+/*   Updated: 2017/03/10 15:42:25 by evanheum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+char *ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	size_t i;
-	size_t len;
-	char *str;
+	int i;
+	char *substring;
 
 	i = 0;
-	len = ft_strlen((char*)s1);
-	str = (char*)malloc((len + 1) * sizeof(*s1));
-	if (!str)
+	if (s == 0)
 		return (0);
-	while (i <= len)
+	substring = (char*)malloc(sizeof(char) *(len + 1));
+	if (substring == 0)
+		return (0);
+	while (len--)
 	{
-		str[i] = s1[i];
+		substring[i] = s[start + i];
 		i++;
 	}
-	return (str);
+	substring[i] = '\0';
+	return (substring);
 }

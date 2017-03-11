@@ -1,31 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: evanheum <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: evanheum <evanheum@42.us.org>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/27 17:15:06 by evanheum          #+#    #+#             */
-/*   Updated: 2017/03/10 13:39:09 by evanheum         ###   ########.fr       */
+/*   Created: 2017/03/10 08:41:01 by evanheum          #+#    #+#             */
+/*   Updated: 2017/03/10 08:49:45 by evanheum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+char *ft_strnew(size_t size)
 {
-	size_t i;
-	size_t len;
-	char *str;
-
-	i = 0;
-	len = ft_strlen((char*)s1);
-	str = (char*)malloc((len + 1) * sizeof(*s1));
-	if (!str)
-		return (0);
-	while (i <= len)
-	{
-		str[i] = s1[i];
-		i++;
-	}
-	return (str);
+	return ((char*)ft_memalloc(size + 1));
 }
