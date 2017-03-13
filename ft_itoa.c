@@ -1,32 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: evanheum <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: evanheum <evanheum@42.us.org>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/11 14:47:12 by evanheum          #+#    #+#             */
-/*   Updated: 2017/03/12 09:29:39 by evanheum         ###   ########.fr       */
+/*   Created: 2017/03/12 10:02:38 by evanheum          #+#    #+#             */
+/*   Updated: 2017/03/13 10:21:13 by evanheum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putnbr(int n)
+static size_t ft_get_int_str(int n)
 {
-	long num;
-
-	num = n;
-	if (num < 0)
-	{
-		ft_putchar('-');
-		num = -num;
-	}
-	if (num > 9)
-	{
-		ft_putnbr(num / 10);
-		ft_putnbr(num % 10);
-	}
-	else
-		ft_putchar( num + '0');
+	size_t i;
+	i = 1;
+	while (n /= 10)
+		i++;
+	return (i);
 }
+
+char	*ft_itoa(int value)
+{
+	char *str;
+	int num;
+	size_t s_len;
+
+	slen = ft_get_int_str(n);
+	num = n;
+	if (n < 0)
+	{
+		num = -n;
+		s_len++;
+	}
+	str = 
+
