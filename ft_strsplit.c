@@ -1,42 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: evanheum <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/08 14:25:29 by evanheum          #+#    #+#             */
-/*   Updated: 2017/03/13 11:25:25 by evanheum         ###   ########.fr       */
+/*   Created: 2017/03/13 18:24:50 by evanheum          #+#    #+#             */
+/*   Updated: 2017/03/13 21:01:53 by evanheum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+static int ft_count_c(int count, char *str, char c)
 {
-	int answer;
-	int pos_neg;
-	int	n;
+	count = 0;
 
-	answer = 0;
-	pos_neg = 1;
-	n = 0;
-	while(*str == '\t' || *str == '\n'|| *str == '\r' || *str == '\v' 
-			|| *str == '\f' || *str == ' ')
+	if (*str == c)
 		str++;
-	if (*str == '-')
+	if (*str != c)
 	{
-		pos_neg = -1;
+		count++;
 		str++;
 	}
-	else if(*str == '+')
-		str++;
-	while (*str >= '0' && *str <= '9')
-	{	
-		answer = answer * 10 + (*str++ - '0');
-		n++;
-	}
-	if (n > 12)
-		return ((pos_neg == 1) ? -1 : 0);
-	return (answer * pos_neg);
+	return (count);
 }
+
+static char ft_malloc_count(char *str)
+{
+	str = (char*)malloc(ft_count_c);
+}
+
+char **ft_strsplit(char const *s, char c)
+{
+

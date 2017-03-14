@@ -18,6 +18,7 @@ SRC = ft_atoi.c \
 	  ft_isascii.c \
 	  ft_isdigit.c \
 	  ft_isprint.c \
+	  ft_itoa.c \
 	  ft_memalloc.c \
 	  ft_memccpy.c \
 	  ft_memchr.c \
@@ -52,6 +53,7 @@ SRC = ft_atoi.c \
 	  ft_strnew.c \
 	  ft_strnstr.c \
 	  ft_strrchr.c \
+	  ft_strsplit.c \
 	  ft_strstr.c \
 	  ft_strsub.c \
 	  ft_strtrim.c \
