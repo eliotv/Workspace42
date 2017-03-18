@@ -6,7 +6,7 @@
 /*   By: evanheum <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/27 17:29:52 by evanheum          #+#    #+#             */
-/*   Updated: 2017/03/13 19:39:25 by evanheum         ###   ########.fr       */
+/*   Updated: 2017/03/17 11:08:54 by evanheum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,14 @@
 #include <string.h>
 #include <stdlib.h>
 #include <unistd.h>
+
+typedef struct		s_list
+{
+	void			*content;
+	size_t			content_size;
+	struct s_list 	*next;
+}					t_list;
+ 
 
 int ft_atoi(const char *str);
 void ft_bzero(void *s, size_t n);
@@ -33,9 +41,13 @@ void ft_memdel(void **ap);
 void *ft_memmove(void *dst, const void *src, size_t len);
 void *ft_memset(void *b, int c, size_t len);
 void ft_putchar(char c);
+void ft_putchar_fd(char c, int fd);
 void ft_putendl(char const *s);
+void ft_putendl_fd(char const *s, int fd);
 void ft_putnbr(int n);
+void ft_putnbr_fd(int n, int fd);
 void ft_putstr(char *str);
+void ft_putstr_fd(char const *s, int fd);
 char *ft_strcat(char *s1, const char *s2);
 char *strchr(const char *s, int c);
 void ft_strclr(char *s);
@@ -66,4 +78,9 @@ void ft_swap(int *a, int *b);
 int ft_tolower(int c);
 int ft_toupper(int c);
 
+/*
+ * Bonus 
+ */
+void *ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
+t_list *ft_lstnew(void const *content, size_t content_size);
 #endif
