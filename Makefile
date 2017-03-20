@@ -11,6 +11,7 @@
 # **************************************************************************** #
 
 NAME = libft.a
+CFLAG = -Wall -Wextra -Werror
 SRC = ft_atoi.c \
 	  ft_bzero.c \
 	  ft_isalnum.c \
@@ -19,7 +20,11 @@ SRC = ft_atoi.c \
 	  ft_isdigit.c \
 	  ft_isprint.c \
 	  ft_itoa.c \
+	  ft_lstadd.c \
+	  ft_lstdel.c \
 	  ft_lstdelone.c \
+	  ft_lstiter.c \
+	  ft_lstmap.c \
 	  ft_lstnew.c \
 	  ft_memalloc.c \
 	  ft_memccpy.c \
@@ -69,14 +74,17 @@ SRC = ft_atoi.c \
 
 OBJ = $(SRC:.c=.o)
 
-all:
-	gcc -Wall -Wextra -Werror -c $(SRC)
-	ar rc $(NAME) $(OBJ)
+all: $(NAME)
 
+$(OBJ): %.o: %.c
+	@gcc -c $(CFLAG) $< -o $@
+
+$(NAME): $(OBJ)
+	@ar rc $(NAME) $(OBJ)
 clean:
-	rm -rf $(OBJ)
+	@rm -f $(OBJ)
 
 fclean: clean
-	rm -rf $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all

@@ -6,18 +6,18 @@
 /*   By: evanheum <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/02 15:53:22 by evanheum          #+#    #+#             */
-/*   Updated: 2017/03/06 14:53:47 by evanheum         ###   ########.fr       */
+/*   Updated: 2017/03/19 13:35:39 by evanheum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
-#include <stdio.h>
 
-void	*ft_memccpy (void *dst, const void *src, int c, size_t n)
+#include "libft.h"
+
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	unsigned char *d;
-	const unsigned char *s;
-	size_t i;
-	unsigned char a;
+	unsigned char		*d;
+	const unsigned char	*s;
+	size_t				i;
+	unsigned char		a;
 
 	i = 0;
 	a = (unsigned char)c;
@@ -30,5 +30,5 @@ void	*ft_memccpy (void *dst, const void *src, int c, size_t n)
 			return (d + i + 1);
 		i++;
 	}
-	return(NULL);
+	return (NULL);
 }

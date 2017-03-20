@@ -6,7 +6,7 @@
 /*   By: evanheum <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/11 10:40:30 by evanheum          #+#    #+#             */
-/*   Updated: 2017/03/13 11:25:15 by evanheum         ###   ########.fr       */
+/*   Updated: 2017/03/19 13:17:22 by evanheum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 char	*ft_strtrim(char const *s)
 {
-	int i;
-	int len;
-	char *str;
+	int		i;
+	int		len;
+	char	*str;
+
 	if (!s)
 		return (0);
 	while (*s == ' ' || *s == '\t' || *s == '\n')

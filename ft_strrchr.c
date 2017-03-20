@@ -6,7 +6,7 @@
 /*   By: evanheum <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/01 18:52:30 by evanheum          #+#    #+#             */
-/*   Updated: 2017/03/09 13:48:42 by evanheum         ###   ########.fr       */
+/*   Updated: 2017/03/19 13:41:37 by evanheum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strrchr(const char *s, int c)
 
 	i = 0;
 	len = ft_strlen((char*)s);
-	while ( i <= len && s[len] != (char)c)
+	while (i <= len && s[len] != (char)c)
 		len--;
 	if (s[len] == (char)c)
 		return ((char*)&s[len]);

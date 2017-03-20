@@ -6,14 +6,14 @@
 /*   By: evanheum <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/02 17:53:25 by evanheum          #+#    #+#             */
-/*   Updated: 2017/03/08 15:52:01 by evanheum         ###   ########.fr       */
+/*   Updated: 2017/03/19 13:38:58 by evanheum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-void *ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	unsigned char *d;
 	unsigned char *s;

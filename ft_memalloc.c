@@ -6,15 +6,16 @@
 /*   By: evanheum <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/09 15:36:11 by evanheum          #+#    #+#             */
-/*   Updated: 2017/03/11 13:02:15 by evanheum         ###   ########.fr       */
+/*   Updated: 2017/03/19 12:12:35 by evanheum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memalloc(size_t size)
+void	*ft_memalloc(size_t size)
 {
-	void *mal;
+	void	*mal;
+
 	mal = malloc(size);
 	if (mal == 0)
 		return (0);

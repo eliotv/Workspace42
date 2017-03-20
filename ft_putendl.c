@@ -6,7 +6,7 @@
 /*   By: evanheum <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/11 14:27:19 by evanheum          #+#    #+#             */
-/*   Updated: 2017/03/12 10:01:19 by evanheum         ###   ########.fr       */
+/*   Updated: 2017/03/19 11:55:17 by evanheum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_putendl(char const *s)
 {
 	if (!s)
-		return;
+		return ;
 	while (*s)
 	{
 		ft_putchar(*s);

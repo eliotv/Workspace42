@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lsnew.c                                         :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: evanheum <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/17 09:53:40 by evanheum          #+#    #+#             */
-/*   Updated: 2017/03/17 13:52:20 by evanheum         ###   ########.fr       */
+/*   Updated: 2017/03/19 15:41:00 by evanheum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstnew(void const *content, size_t content_size)
+t_list	*ft_lstnew(void const *content, size_t content_size)
 {
-	t_list *list;
+	t_list	*list;
 
+	if (!(list = ((t_list*)malloc(sizeof(t_list)))))
+		return (NULL);
 	if (!content)
 	{
 		list->content = NULL;
@@ -23,8 +25,8 @@ t_list *ft_lstnew(void const *content, size_t content_size)
 	}
 	else
 	{
-		if(!(list->content = malloc(content_size)))
-		{	
+		if (!(list->content = malloc(sizeof(content_size))))
+		{
 			free(list);
 			return (NULL);
 		}

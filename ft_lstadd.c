@@ -6,13 +6,15 @@
 /*   By: evanheum <evanheum@42.us.org>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/19 09:27:15 by evanheum          #+#    #+#             */
-/*   Updated: 2017/03/19 09:30:13 by evanheum         ###   ########.fr       */
+/*   Updated: 2017/03/19 15:24:54 by evanheum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 void	ft_lstadd(t_list **alst, t_list *new)
 {
-	if (alst != NULL && new != NULL)
+	if (alst != NULL || new != NULL)
 	{
 		new->next = *alst;
 		*alst = new;

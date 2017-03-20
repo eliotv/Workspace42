@@ -6,9 +6,11 @@
 /*   By: evanheum <evanheum@42.us.org>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/19 09:30:44 by evanheum          #+#    #+#             */
-/*   Updated: 2017/03/19 09:34:12 by evanheum         ###   ########.fr       */
+/*   Updated: 2017/03/19 13:54:29 by evanheum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {

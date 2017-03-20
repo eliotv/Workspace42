@@ -6,7 +6,7 @@
 /*   By: evanheum <evanheum@42.us.org>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/10 15:18:18 by evanheum          #+#    #+#             */
-/*   Updated: 2017/03/10 15:39:56 by evanheum         ###   ########.fr       */
+/*   Updated: 2017/03/19 16:10:44 by evanheum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ int	ft_strnequ(char const *s1, char const *s2, size_t n)
 	{
 		while (*s1 && *s2 && n > 0)
 		{
+			if (*s1 != *s2)
+				return (0);
 			s1++;
 			s2++;
 			n--;
-			if (*s1 != *s2)
-				return (0);
 		}
 		return (1);
 	}

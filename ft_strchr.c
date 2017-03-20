@@ -6,21 +6,22 @@
 /*   By: evanheum <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/01 18:42:43 by evanheum          #+#    #+#             */
-/*   Updated: 2017/03/08 14:21:15 by evanheum         ###   ########.fr       */
+/*   Updated: 2017/03/19 22:16:47 by evanheum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <string.h>
+
+#include "libft.h"
+
 
 char	*ft_strchr(const char *s, int c)
 {
 	while (*s != '\0')
 	{
-		if (*s == c)
+		if (*s == (char)c)
 			return ((char*)s);
 		s++;
 	}
-	if (*s == c)
-		return((char*)s);
-	return(0);
+	if (*s == (char)c)
+		return ((char*)s);
+	return (NULL);
 }

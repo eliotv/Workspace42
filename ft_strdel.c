@@ -6,13 +6,13 @@
 /*   By: evanheum <evanheum@42.us.org>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/10 08:50:28 by evanheum          #+#    #+#             */
-/*   Updated: 2017/03/10 08:57:00 by evanheum         ###   ########.fr       */
+/*   Updated: 2017/03/19 13:32:25 by evanheum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_strdel(char **as)
+void	ft_strdel(char **as)
 {
 	if (as && *as)
 	{

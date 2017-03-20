@@ -6,7 +6,7 @@
 /*   By: evanheum <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/08 14:25:29 by evanheum          #+#    #+#             */
-/*   Updated: 2017/03/15 09:51:53 by evanheum         ###   ########.fr       */
+/*   Updated: 2017/03/19 12:05:32 by evanheum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 int	ft_atoi(const char *str)
 {
-	int answer;
-	int pos_neg;
+	int	answer;
+	int	pos_neg;
 	int	n;
 
 	answer = 0;
 	pos_neg = 1;
 	n = 0;
-	while(*str == '\t' || *str == '\n'|| *str == '\r' || *str == '\v' 
+	while (*str == '\t' || *str == '\n' || *str == '\r' || *str == '\v'
 			|| *str == '\f' || *str == ' ')
 		str++;
 	if (*str == '-')
@@ -29,10 +29,10 @@ int	ft_atoi(const char *str)
 		pos_neg = -1;
 		str++;
 	}
-	else if(*str == '+')
+	else if (*str == '+')
 		str++;
 	while (*str >= '0' && *str <= '9')
-	{	
+	{
 		answer = answer * 10 + (*str++ - '0');
 		n++;
 	}

@@ -6,7 +6,7 @@
 /*   By: evanheum <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/08 12:30:29 by evanheum          #+#    #+#             */
-/*   Updated: 2017/03/10 13:37:24 by evanheum         ###   ########.fr       */
+/*   Updated: 2017/03/19 13:39:21 by evanheum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		len = ft_strlen(src) + ft_strlen(dst);
 	else
 		len = ft_strlen(src) + size;
-	if (ft_strlen(dst) < size -1 && size !=0)
+	if (ft_strlen(dst) < size - 1 && size != 0)
 	{
 		while (*dst)
 		{

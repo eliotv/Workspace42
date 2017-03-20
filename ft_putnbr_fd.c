@@ -6,13 +6,13 @@
 /*   By: evanheum <evanheum@42.us.org>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/12 09:29:23 by evanheum          #+#    #+#             */
-/*   Updated: 2017/03/12 09:36:33 by evanheum         ###   ########.fr       */
+/*   Updated: 2017/03/19 12:44:17 by evanheum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
 	long num;
 
@@ -28,5 +28,5 @@ void ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(num % 10, fd);
 	}
 	else
-		ft_putchar_fd( num + '0', fd);
+		ft_putchar_fd(num + '0', fd);
 }

@@ -6,13 +6,13 @@
 /*   By: evanheum <evanheum@42.us.org>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/10 08:57:21 by evanheum          #+#    #+#             */
-/*   Updated: 2017/03/10 09:04:32 by evanheum         ###   ########.fr       */
+/*   Updated: 2017/03/19 11:49:26 by evanheum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_strclr(char *s)
+void	ft_strclr(char *s)
 {
 	while (s != 0 && *s)
 		*s++ = '\0';

@@ -6,32 +6,31 @@
 /*   By: evanheum <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/13 18:24:50 by evanheum          #+#    #+#             */
-/*   Updated: 2017/03/17 10:40:18 by evanheum         ###   ########.fr       */
+/*   Updated: 2017/03/19 13:38:23 by evanheum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int ft_count_c(char const *str, char c)
+static	int		ft_count_c(char const *str, char c)
 {
-	int		count;
+	int			count;
 
 	count = 0;
 	while (*str == c && *str != '\0')
 		str++;
 	while (*str != c && *str != '\0')
 	{
-	  count++;
-	  str++;
+		count++;
+		str++;
 	}
 	return (count);
 }
 
-
-static int ft_count_wrd(char const swrd[], char c)
+static	int		ft_count_wrd(char const swrd[], char c)
 {
-	int count;
-	const char *s;
+	int			count;
+	const char	*s;
 
 	s = swrd;
 	count = 0;
@@ -47,23 +46,22 @@ static int ft_count_wrd(char const swrd[], char c)
 	return (count);
 }
 
-char	**ft_strsplit(char const *s, char c)
+char			**ft_strsplit(char const *s, char c)
 {
-	int k;
-	int r;
+	int			k;
+	int			r;
+	char		**ary;
+	int			wordcount;
 
-	char  **ary;
-	int wordcount;
 	if (!s || !c)
 		return (0);
 	wordcount = ft_count_wrd(s, c);
 	if (!(ary = ((char**)malloc(sizeof(char*) * (wordcount + 1)))))
-			return (NULL);
+		return (NULL);
 	r = 0;
 	while (wordcount--)
 	{
-		ary[r] = ((char*)malloc(sizeof(char) * (ft_count_c(s, c) + 1)));
-		if (!ary[r])
+		if (!(ary[r] = ((char*)malloc(sizeof(char) * (ft_count_c(s, c) + 1)))))
 			return (NULL);
 		k = 0;
 		while (*s == c && *s != '\0')

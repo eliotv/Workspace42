@@ -6,7 +6,7 @@
 /*   By: evanheum <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/01 19:13:13 by evanheum          #+#    #+#             */
-/*   Updated: 2017/03/11 12:38:26 by evanheum         ###   ########.fr       */
+/*   Updated: 2017/03/19 16:34:17 by evanheum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 			i++;
 			j++;
 		}
-		if (!little [j])
+		if (!little[j])
 			return ((char*)big + l);
 	}
 	return (0);
 }
-

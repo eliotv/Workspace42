@@ -6,17 +6,17 @@
 /*   By: evanheum <evanheum@42.us.org>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/10 15:42:42 by evanheum          #+#    #+#             */
-/*   Updated: 2017/03/10 19:28:04 by evanheum         ###   ########.fr       */
+/*   Updated: 2017/03/19 12:05:59 by evanheum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char *str;
-	size_t i;
-	size_t j;
+	char	*str;
+	size_t	i;
+	size_t	j;
 
 	j = 0;
 	if (!s1 || !s2)
