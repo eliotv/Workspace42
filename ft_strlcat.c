@@ -6,7 +6,7 @@
 /*   By: evanheum <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/08 12:30:29 by evanheum          #+#    #+#             */
-/*   Updated: 2017/03/19 13:39:21 by evanheum         ###   ########.fr       */
+/*   Updated: 2017/03/20 00:57:23 by evanheum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,29 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t i;
-	size_t len;
+	char		*d;
+	const char	*s;
+	size_t		i;
+	size_t		len;
 
-	i = 0;
-	if (size == 0)
-		return (i);
-	if (size + ft_strlen(src) > ft_strlen(src) + ft_strlen(dst))
-		len = ft_strlen(src) + ft_strlen(dst);
-	else
-		len = ft_strlen(src) + size;
-	if (ft_strlen(dst) < size - 1 && size != 0)
+	d = dst;
+	s = src;
+	i = size;
+	while (i-- != 0 && *d != '\0')
+		d++;
+	len = d - dst;
+	i = size - len;
+	if (i == 0)
+		return ((size_t)(len + ft_strlen(s)));
+	while (*s != '\0')
 	{
-		while (*dst)
+		if (i != 1)
 		{
-			dst++;
-			i++;
+			*d++ = *s;
+			i--;
 		}
-		while (*src && i++ < size - 1)
-			*dst++ = *src++;
-		*dst = '\0';
+		s++;
 	}
-	return (len);
+	*d = '\0';
+	return ((size_t)(len + (s - src)));
 }

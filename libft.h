@@ -6,7 +6,7 @@
 /*   By: evanheum <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/27 17:29:52 by evanheum          #+#    #+#             */
-/*   Updated: 2017/03/19 14:01:53 by evanheum         ###   ########.fr       */
+/*   Updated: 2017/03/19 22:36:18 by evanheum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void				ft_putnbr_fd(int n, int fd);
 void				ft_putstr(char *str);
 void				ft_putstr_fd(char const *s, int fd);
 char				*ft_strcat(char *s1, const char *s2);
-char				*strchr(const char *s, int c);
+char				*ft_strchr(const char *s, int c);
 void				ft_strclr(char *s);
 int					ft_strcmp(const char *s1, const char *s2);
 char				*ft_strcpy(char *s1, const char *s2);

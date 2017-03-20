@@ -6,7 +6,7 @@
 /*   By: evanheum <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/08 14:25:29 by evanheum          #+#    #+#             */
-/*   Updated: 2017/03/19 12:05:32 by evanheum         ###   ########.fr       */
+/*   Updated: 2017/03/19 23:48:03 by evanheum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,5 @@ int	ft_atoi(const char *str)
 		answer = answer * 10 + (*str++ - '0');
 		n++;
 	}
-	if (n > 12)
-		return ((pos_neg == 1) ? -1 : 0);
 	return (answer * pos_neg);
 }
