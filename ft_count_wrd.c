@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_count_wrd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: evanheum <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/01 19:39:45 by evanheum          #+#    #+#             */
-/*   Updated: 2017/03/20 10:11:33 by evanheum         ###   ########.fr       */
+/*   Created: 2017/03/20 10:54:13 by evanheum          #+#    #+#             */
+/*   Updated: 2017/03/20 11:35:17 by evanheum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strncmp(const char *s1, const char *s2, size_t n)
+int		ft_count_wrd(char const *swrd, char c)
 {
-	size_t	i;
+	int			count;
+	const char	*s;
 
-	i = 0;
-	while ((s1[i] != '\0' || s2[i] != '\0') && (i < n))
+	s = swrd;
+	count = 0;
+	while (*s)
 	{
-		if (s1[i] != s2[i])
-			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-		i++;
+		while (*s == c && *s != '\0')
+			s++;
+		if (*s != c && *s != '\0')
+			count++;
+		while (*s != c && *s != '\0')
+			s++;
 	}
-	return (0);
+	return (count);
 }

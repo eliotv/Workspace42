@@ -71,6 +71,10 @@ SRC = ft_atoi.c \
 	  ft_swap.c \
 	  ft_tolower.c \
 	  ft_toupper.c \
+	  ft_count_wrd.c \
+	  ft_count_c.c \
+	  ft_count_int_len.c \
+	  ft_isspace.c \
 
 OBJ = $(SRC:.c=.o)
 

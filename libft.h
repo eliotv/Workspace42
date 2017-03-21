@@ -6,7 +6,7 @@
 /*   By: evanheum <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/27 17:29:52 by evanheum          #+#    #+#             */
-/*   Updated: 2017/03/19 22:36:18 by evanheum         ###   ########.fr       */
+/*   Updated: 2017/03/20 17:41:34 by evanheum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,4 +83,8 @@ void				ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
 t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+int					ft_count_wrd(char const *swrd, char c);
+int					ft_count_c(char const *str, char c);
+size_t				ft_count_int_len(int n);
+int					ft_isspace(int c);
 #endif

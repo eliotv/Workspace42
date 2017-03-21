@@ -6,45 +6,11 @@
 /*   By: evanheum <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/13 18:24:50 by evanheum          #+#    #+#             */
-/*   Updated: 2017/03/19 13:38:23 by evanheum         ###   ########.fr       */
+/*   Updated: 2017/03/20 13:38:13 by evanheum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static	int		ft_count_c(char const *str, char c)
-{
-	int			count;
-
-	count = 0;
-	while (*str == c && *str != '\0')
-		str++;
-	while (*str != c && *str != '\0')
-	{
-		count++;
-		str++;
-	}
-	return (count);
-}
-
-static	int		ft_count_wrd(char const swrd[], char c)
-{
-	int			count;
-	const char	*s;
-
-	s = swrd;
-	count = 0;
-	while (*s)
-	{
-		while (*s == c && *s != '\0')
-			s++;
-		if (*s != c && *s != '\0')
-			count++;
-		while (*s != c && *s != '\0')
-			s++;
-	}
-	return (count);
-}
 
 char			**ft_strsplit(char const *s, char c)
 {

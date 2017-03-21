@@ -6,7 +6,7 @@
 /*   By: evanheum <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/08 14:25:29 by evanheum          #+#    #+#             */
-/*   Updated: 2017/03/19 23:48:03 by evanheum         ###   ########.fr       */
+/*   Updated: 2017/03/20 17:42:46 by evanheum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,14 @@
 
 int	ft_atoi(const char *str)
 {
-	int	answer;
-	int	pos_neg;
-	int	n;
+	unsigned long long	answer;
+	int					pos_neg;
+	int					n;
 
 	answer = 0;
 	pos_neg = 1;
 	n = 0;
-	while (*str == '\t' || *str == '\n' || *str == '\r' || *str == '\v'
-			|| *str == '\f' || *str == ' ')
+	while (ft_isspace(*str))
 		str++;
 	if (*str == '-')
 	{
@@ -36,5 +35,7 @@ int	ft_atoi(const char *str)
 		answer = answer * 10 + (*str++ - '0');
 		n++;
 	}
+	if (n > 19)
+		return ((pos_neg == 1) ? -1 : 0);
 	return (answer * pos_neg);
 }

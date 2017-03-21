@@ -6,28 +6,11 @@
 /*   By: evanheum <evanheum@42.us.org>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/12 10:02:38 by evanheum          #+#    #+#             */
-/*   Updated: 2017/03/19 13:18:11 by evanheum         ###   ########.fr       */
+/*   Updated: 2017/03/20 11:56:20 by evanheum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static size_t	ft_count_int_len(int n)
-{
-	size_t	i;
-
-	i = 2;
-	if (n == 0)
-	{
-		n = 0;
-		return (i);
-	}
-	if (n < 0)
-		i++;
-	while (n /= 10)
-		i++;
-	return (i);
-}
 
 char			*ft_itoa(int n)
 {
